@@ -12,9 +12,9 @@ import java.util.logging.Logger;
 public class UserDaoJDBCImpl implements UserDao {
 
     private static final Logger logger  = Logger.getLogger(UserDaoJDBCImpl.class.getName());
-    private static final Util util = new Util();
-    private final Connection cnnct = util.getConnection();
-
+    
+    private Connection cnnct = new Util().getConnection();
+    
     public UserDaoJDBCImpl() {
 
     }
